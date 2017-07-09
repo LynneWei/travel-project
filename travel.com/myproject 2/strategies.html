@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>strategies</title>
+		<meta charset="utf-8">
+		<meta name="Author" content="Lynne Wei">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css"> 
+		<script type="text/javascript" src="scripts/sMove.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				var myRoutesMessage = document.getElementsByClassName("myRoutesMessage");
+				for(var i = 0;i<myRoutesMessage.length;i++) {
+					myRoutesMessage[i].onmouseover = function() {
+						var _thisR = this.getElementsByTagName("img")[0];
+						startMove(_thisR,{width:340,height:185},false);
+					}
+					myRoutesMessage[i].onmouseout = function() {
+						var _thisR = this.getElementsByTagName("img")[0];
+						startMove(_thisR,{width:330,height:175},false);
+					}
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				var $routesForign = $(".routesForign ul li:gt(9):not(:last)");
+				$routesForign.hide();
+				var $myForignPlaceMore = $('.routesForign .myForignPlaceMore');
+				$myForignPlaceMore.click(function() {
+					//alert();
+					if($routesForign.is(":visible")) {
+						$routesForign.hide();
+						$myForignPlaceMore.text("更多");
+					} else {
+						$routesForign.show();
+						$myForignPlaceMore.text("收起");
+					}
+
+				});
+				var $routesNav = $(".routesNav ul li:gt(9):not(:last)");
+				$routesNav.hide();
+				var $myPlaceMore = $('.routesNav .myPlaceMore');
+				$myPlaceMore.click(function() {
+					if($routesNav.is(":visible")) {
+						$routesNav.hide();
+						$myPlaceMore.text("更多");
+					} else {
+						$routesNav.show();
+						$myPlaceMore.text("收起");
+					}
+
+				});
+				
+
+			});
+		</script>
+		
+	</head>
+	<body class="strategies">
+		<div class="navbar mynav">
+				<div class="navbar-header">
+					<a href="#"><img class="mylogo" src="images/mylogo.png" /></a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">旅游助手</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">目的地</a>
+					</li>					
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">折扣季</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">锦囊攻略</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">登录</a></li>
+					<li><a href="">注册</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row text-center routesNav">
+					<div class="col-md-10">
+						<ul>
+							<li><strong>国内游</strong></li>
+							<li><a href="">内蒙古</a></li>
+							<li><a href="">哈尔滨</a></li>
+							<li><a href="">成都</a></li>
+							<li><a href="">长春</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">内蒙古</a></li>
+							<li><a href="">哈尔滨</a></li>
+							<li><a href="">成都</a></li>
+							<li><a href="">长春</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2">
+						<span class="myPlaceMore">更多</span>
+					</div>
+				</div>
+				<div class="row routesForign text-center">
+					<div class="col-md-10">
+						<ul>
+							<li><strong>国外游</strong></li>
+							<li><a href="">内蒙古</a></li>
+							<li><a href="">哈尔滨</a></li>
+							<li><a href="">成都</a></li>
+							<li><a href="">长春</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">内蒙古</a></li>
+							<li><a href="">哈尔滨</a></li>
+							<li><a href="">成都</a></li>
+							<li><a href="">长春</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+							<li><a href="">北京</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2">
+						<span class="myForignPlaceMore">更多</span>
+					</div>
+				</div>
+				<div class="row myRoutes">
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row myRoutes">
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row myRoutes">
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myRoutesMessage">
+							<div class="myRoutesImg">
+								<img src="images/rotate/r_8.jpg">
+								<div class="myRoutesText"><div class="routeTime">地点</div><div class="routeTopic"><p>上海直飞东京四天游</p></div></div>
+							</div>
+							<div class="myRoutesContent">
+								<p>攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情攻略详情</p>
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="row myfooter">
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">关于我们</li>
+							<li><a href="">本站简介</a></li>
+							<li><a href="">联系我们</a></li>
+							<li><a href="">合作伙伴</a></li>
+							<li><a href="">进入后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">加入我们</li>
+							<li><a href="">招聘职位</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">网站条款</li>
+							<li><a href="">会员条款</a></li>
+							<li><a href="">社区指南</a></li>
+							<li><a href="">版权声明</a></li>
+							<li><a href="">免责声明</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">帮助中心</li>
+							<li><a href="">新手帮助</a></li>
+							<li><a href="">使用帮助</a></li>
+							<li><a href="">网站地图</a></li>
+						</ul>
+					</div>
+					<div class="footerBottom text-center">
+						<p>版权所有&copy;Lynne Wei；本网站仅做学习交流之用，不做商业用途；</p>
+					</div>
+				</div>
+	</body>
+</html>

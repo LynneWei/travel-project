@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TargetPlace</title>
+		<meta charset="utf-8">
+		<meta name="Author" content="Lynne Wei">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css"> 
+		<script type="text/javascript" src="scripts/sMove.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				var mySilkBagOne = document.getElementsByClassName("mySilkBagOne");
+				for(var i = 0;i<mySilkBagOne.length;i++) {
+					mySilkBagOne[i].onmouseover = function() {
+						var _this = this.getElementsByClassName("mySilkBagThree")[0];
+						startMove(_this,{top:140,height:278},false);
+					}
+					mySilkBagOne[i].onmouseout = function() {
+						var _this = this.getElementsByClassName("mySilkBagThree")[0];
+						startMove(_this,{top:220,height:198},false);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body class="targetPlace">
+		<div class="navbar mynav">
+				<div class="navbar-header">
+					<a href="#"><img class="mylogo" src="images/mylogo.png" /></a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">旅游助手</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">目的地<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="">导航一</a></li>
+							<li><a href="">导航二</a></li>
+							<li><a href="">导航三</a></li>
+						</ul>
+					</li>					
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">折扣季</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">锦囊攻略</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">登录</a></li>
+					<li><a href="">注册</a></li>
+				</ul>
+			</div>	
+			<ol class="breadcrumb">
+				<li><a href="">首页</a></li>
+				<li><a href="">目的地</a></li>
+				<li class="active">香港</li>
+			</ol>
+			<div class="container">
+				<div class="row targetName">
+					<span>Hong Kong</span>
+					<span>香港</span>
+					<span class="wantTo"><em>120039</em>人喜欢</span>
+				</div>
+				<div class="row myTargetRotate">
+					
+				</div>
+				<div class="row myTabNav">
+					<span>热门•搜索</span>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#hotRoute" data-toggle="tab">热门路线</a></li>
+						<li><a href="#hotSale" data-toggle="tab">
+						热门折扣</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade in active" id="hotRoute">
+							<div class="row">
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>30012</em>人去过</span></div></div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="hotSale">
+							<div class="row">
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+								<div class="col-md-3"><div><img class="myTargetImg" src="images/icon/1.jpg"><h4>香港直飞上海五天四晚</h4><span><em>6999</em><strong>5400</strong>元</span></div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row mySilkBag">
+					<span>锦囊•妙计</span>
+					<div class="col-md-4">
+						<div class="mySilkBagOne">
+							<div class="mySilkBagTwo">
+								<img src="images/icon/2.jpg">
+							</div>
+							<div class="mySilkBagThree">
+								<div class="myIcon"><img src="images/personIcon/4_4.jpg"></div>
+								<span>taylor</span>
+								<div class="mySilkBagContent">
+									<h4 class="text-center">I'm a topic</h4>
+									<p>锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊</p></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="mySilkBagOne">							
+							<div class="mySilkBagTwo">
+								<img src="images/icon/2.jpg">
+							</div>
+							<div class="mySilkBagThree">
+								<div class="myIcon"><img src="images/personIcon/4_4.jpg"></div>
+								<span>taylor</span>
+								<div class="mySilkBagContent">
+									<h4 class="text-center">I'm a topic</h4>
+									<p>锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊</p></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="mySilkBagOne">
+							<div class="mySilkBagTwo">
+								<img src="images/icon/2.jpg">
+							</div>
+							<div class="mySilkBagThree">
+								<div class="myIcon"><img src="images/personIcon/4_4.jpg"></div>
+								<span>taylor</span>
+								<div class="mySilkBagContent">
+									<h4 class="text-center">I'm a topic</h4>
+									<p>锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊妙计锦囊</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row myfooter">
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">关于我们</li>
+							<li><a href="">本站简介</a></li>
+							<li><a href="">联系我们</a></li>
+							<li><a href="">合作伙伴</a></li>
+							<li><a href="">进入后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">加入我们</li>
+							<li><a href="">招聘职位</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">网站条款</li>
+							<li><a href="">会员条款</a></li>
+							<li><a href="">社区指南</a></li>
+							<li><a href="">版权声明</a></li>
+							<li><a href="">免责声明</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">帮助中心</li>
+							<li><a href="">新手帮助</a></li>
+							<li><a href="">使用帮助</a></li>
+							<li><a href="">网站地图</a></li>
+						</ul>
+					</div>
+					<div class="footerBottom text-center">
+						<p>版权所有&copy;Lynne Wei；本网站仅做学习交流之用，不做商业用途；</p>
+					</div>
+				</div>
+			</div>
+			
+	</body>
+</html>

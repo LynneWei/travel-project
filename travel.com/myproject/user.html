@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>user</title>
+		<meta charset="utf-8">
+		<meta name="Author" content="Lynne Wei">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css"> 
+		<script type="text/javascript" src="scripts/sMove.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				var updateIcon = document.getElementById("updateIcon");
+				var updateAddress = document.getElementById("updateAddress");
+				var updateEmail = document.getElementById("updateEmail");
+				var uMOne = document.getElementsByClassName("uMOne")[0];
+				var uMTwo = document.getElementsByClassName("uMTwo")[0];
+				var uMThree = document.getElementsByClassName("uMThree")[0];
+				updateIcon.onclick = function() {
+					uMOne.style.display = "block";
+					this.innerText = "不选择并返回";
+					this.onclick = function() {
+						uMOne.style.display = "none";
+						this.innerText = "选择头像";
+					}
+				}
+				updateAddress.onclick = function() {
+					uMTwo.style.display = "block";
+					this.innerText = "不填写并返回";
+					this.onclick = function() {
+						uMTwo.style.display = "none";
+						this.innerText = "填写地址";
+					}
+				}
+				updateEmail.onclick = function() {
+					uMThree.style.display = "block";
+					this.innerText = "不填写并返回";
+					this.onclick = function() {
+						uMThree.style.display = "none";
+						this.innerText = "填写邮箱";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body class="user">
+		<div class="navbar mynav">
+				<div class="navbar-header">
+					<a href="#"><img class="mylogo" src="images/mylogo.png" /></a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">旅游助手</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">目的地<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="">导航一</a></li>
+							<li><a href="">导航二</a></li>
+							<li><a href="">导航三</a></li>
+						</ul>
+					</li>					
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">折扣季</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">锦囊攻略</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">登录</a></li>
+					<li><a href="">注册</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row"><div class="backgroundImgs"><img src="images/rotate/r_10.jpg"></div></div>
+				<div class="row userMessage">
+					<div class="userIcon"><img src="images/personIcon/4_3.jpg"></div>
+					<span>userName</span>
+				</div>
+				<div class="row update">
+					<div class="updateMessages">
+						<p>还没有头像？快去添加一个吧！<strong>></strong><span id="updateIcon">选择头像</span><span class="uMOne"><input id="updateMyIcon" type="file"><input class="mybtn" type="submit" value="提交" /></span></p>
+						<hr>
+						<p>我们找不到您呢！快去添加一个吧！<strong>></strong><span id="updateAddress">填写地址</span><span class="uMTwo"><input type="text"  id="updateMyAddress"><input type="submit" value="提交" class="mybtn" /></span></p>
+						<hr>
+						<p>我们需要您的信箱给您发送即时消息哦！<strong>></strong><span id="updateEmail">填写邮箱</span><span class="uMThree"><input type="text" id="updateMyEmail"><input type="submit" value="提交" class="mybtn" /></span></p>
+					</div>
+				</div>
+				<div class="row myOrderTitle text-center">我的订单</div>
+				<div class="row myOrders">
+
+					<div class="row order">
+						<div class="col-md-3">
+							<img src="images/icon/1.jpg">
+						</div>
+						<div class="col-md-9">
+							<span class="myTopics"><strong>上海直飞曼谷八天四晚半自由行</strong></span>
+							<p>订单日期：<span class="orderTime">2013-2-3</span><span class="price"><em>5400</em>元</span></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row myOrders">
+					<div class="row order">
+						<div class="col-md-3">
+							<img src="images/icon/1.jpg">
+						</div>
+						<div class="col-md-9">
+							<span class="myTopics"><strong>上海直飞曼谷八天四晚半自由行</strong></span>
+							<p>订单日期：<span class="orderTime">2013-2-3</span><span class="price"><em>5400</em>元</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="row myOrders">
+					<div class="row order">
+						<div class="col-md-3">
+							<img src="images/icon/1.jpg">
+						</div>
+						<div class="col-md-9">
+							<span class="myTopics"><strong>上海直飞曼谷八天四晚半自由行</strong></span>
+							<p>订单日期：<span class="orderTime">2013-2-3</span><span class="price"><em>5400</em>元</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row myfooter">
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">关于我们</li>
+							<li><a href="">本站简介</a></li>
+							<li><a href="">联系我们</a></li>
+							<li><a href="">合作伙伴</a></li>
+							<li><a href="">进入后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">加入我们</li>
+							<li><a href="">招聘职位</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">网站条款</li>
+							<li><a href="">会员条款</a></li>
+							<li><a href="">社区指南</a></li>
+							<li><a href="">版权声明</a></li>
+							<li><a href="">免责声明</a></li>
+						</ul>
+					</div>
+					<div class="col-md-1 text-center">
+						<ul>
+							<li class="headerLi">帮助中心</li>
+							<li><a href="">新手帮助</a></li>
+							<li><a href="">使用帮助</a></li>
+							<li><a href="">网站地图</a></li>
+						</ul>
+					</div>
+					<div class="footerBottom text-center">
+						<p>版权所有&copy;Lynne Wei；本网站仅做学习交流之用，不做商业用途；</p>
+					</div>
+				</div>
+	</body>
+</html>

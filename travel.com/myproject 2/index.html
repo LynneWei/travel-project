@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>旅游开发项目</title>
+		<meta charset="utf-8">
+		<meta name="Author" content="Lynne Wei">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css"> 
+		<script type="text/javascript" src="scripts/sMove.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				var myDiv = document.getElementsByClassName("one");
+				//var mySale = document.getElementsByClassName("two");
+				var myStrategyDiv = document.getElementsByClassName("threes");
+				var myTravellerDiv = document.getElementsByClassName("myFimg");
+				var myRegist = document.getElementsByClassName("myRegistBtn")[0];
+				var myRegistDiv = document.getElementsByClassName("myRegist")[0];
+				var myexist = document.getElementsByClassName("myexist")[0];
+				var myexist1 = document.getElementsByClassName("myexist1")[0];
+				var myLogin = document.getElementsByClassName("myLoginBtn")[0];
+				var myLoginDiv = document.getElementsByClassName("myLogin")[0];
+				for(var i = 0;i<myDiv.length;i++) {
+					myDiv[i].onmouseover = function() {
+						var _this = this.getElementsByTagName("img")[0];
+						startMove(_this,{opacity:100},false);
+					}
+					myDiv[i].onmouseout = function() {
+						var _this = this.getElementsByTagName("img")[0];
+						startMove(_this,{opacity:60},false);
+					}
+				}
+				for(var k = 0;k<myStrategyDiv.length;k++) {
+					myStrategyDiv[k].onmouseover = function() {
+						var _thisStrategy = this.getElementsByTagName("img")[0];
+						startMove(_thisStrategy,{width:270,height:220},false);
+					}
+					myStrategyDiv[k].onmouseout = function() {
+						var _thisStrategy = this.getElementsByTagName("img")[0];
+						startMove(_thisStrategy,{width:250,height:154},false);
+					}
+				}
+				for(var m = 0;m<myTravellerDiv.length;m++) {
+					myTravellerDiv[m].onmouseover = function() {
+						var _thiss = this.getElementsByTagName("i")[0];
+						startMove(_thiss,{top:-20,opacity:0},function(){
+							_thiss.style.top = 30+'px';
+							startMove(_thiss,{top:20,opacity:100},false);
+						});
+					}
+					myTravellerDiv[m].onmouseout = function() {
+						var _thiss = this.getElementsByTagName("i")[0];
+						startMove(_thiss,{top:20,opacity:100});
+					}
+				}
+				myRegist.onclick = function() {
+					myRegistDiv.style.display = "block";
+				}
+				myLogin.onclick = function() {
+					myLoginDiv.style.display = "block";
+				}
+				myexist.onclick = function() {
+					myRegistDiv.style.display = "none";
+				}
+				myexist1.onclick = function() {
+					myLoginDiv.style.display = "none";
+				}
+			}
+		</script>
+	</head>
+	<body class="index">
+		<div class="rotate">
+			<div class="navbar mynav">
+				<div class="navbar-header">
+					<a href="#"><img class="mylogo" src="images/mylogo.png" /></a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">旅游助手</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">目的地<span class="caret"></span></a>
+					</li>					
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">折扣季</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">锦囊攻略</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">登录</a></li>
+					<li><a href="">注册</a></li>
+				</ul>
+			</div>	
+
+				</div>
+				<div class="container">
+				<div class="row mytitle text-center">
+					<span class="mytextfirst">最</span>•<span class="mytextlast">喜欢</span>
+				</div>
+				<div class="row myfavorite">
+					<div class="col-md-8 myfavoriteLeft">
+						<div class="row">
+							<div class="col-md-3 one"><a href=""><span><img src="images/icon/0.jpg" alt="images"><span class="_one text-center">城市</span></span><div><h4>泰国清迈至拜县往返车票/单程包车（包票）</h4></div></a></div>
+							<div class="col-md-3 one"><a href=""><span><img src="images/icon/1.jpg" alt="images"><span class="_one text-center">攻略</span></span><div><h4>泰国清迈至拜县往返车票/单程包车（包票）</h4></div></a></div>
+							<div class="col-md-3 one"><a href=""><span><img src="images/icon/1.jpg" alt="images"><span class="_one text-center">攻略</span></span><div><h4>泰国清迈至拜县往返车票/单程包车（包票）</h4></div></a></div>
+							<div class="col-md-3 myfavoriteRight text-center">
+								<h4>快来加入我们吧</h4>
+								<p>什么？还没注册？！你out了！</p>
+								<input type="button" class="myRegistBtn" value="立即注册">
+								<p>已由账号？赶快去<a class="myLoginBtn">登录</a>吧！</p>
+							</div>
+							<div class="myRegist text-center">
+								<span class="myexist">&times;</span>
+								<h4>账号注册</h4>
+								<p><span class="myUser">帐号</span><input class="mytext" type="text"></p>
+								<p><span>输入密码</span><input class="mytext" type="text"></p>
+								<p><span>确认密码</span><input class="mytext" type="text"></p>
+								<input type="submit" class="myBtn" value="注册">
+							</div>
+							<div class="myLogin text-center">
+								<span class="myexist1">&times;</span>
+								<h4>用户登录</h4>
+								<p><span class="myUser">帐号</span><input class="mytext" type="text"></p>
+								<p><span>输入密码</span><input class="mytext" type="text"></p>
+								<input type="submit" class="myBtn" value="登录">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 one"><a href=""><span><img src="images/icon/3.jpg" alt="images"><span class="_one text-center">驴友</span></span><div><h4>泰国清迈至拜县往返车票/单程包车（包票）</h4></div></a></div>
+							<div class="col-md-3 one"><a href=""><span><img src="images/icon/4.jpg" alt="images"><span class="_one text-center">折扣</span></span><div><h4>泰国清迈至拜县往返车票/单程包车（包票）</h4></div></a></div>
+							<div class="col-md-3 one"><a href=""><span><img src="images/icon/5.jpg" alt="images"><span class="_one text-center">城市</span></span><div><h4>泰国清迈至拜县往返车票/单程包车（包票）</h4></div></a></div>
+							<div class="col-md-3 one"><a href=""><span><img src="images/icon/5.jpg" alt="images"><span class="_one text-center">城市</span></span><div><h4>泰国清迈至拜县往返车票/单程包车（包票）</h4></div></a></div>
+						</div>
+					</div>
+					
+				</div>
+			<div class="row mytitle mysaletitle text-center">
+					<span class="mytextfirst">最</span>•<span class="mytextlast">折扣</span>
+				</div>
+				<div class="row mysale">
+					<div class="col-md-12 mysaleRight">
+						<div class="row">
+							<div class="col-md-4 mysaleLeft"></div>
+							<div class="col-md-4 two twos"><a href=""><div><img src="images/icon/6.jpg" alt="images"><div class="mysDiv">
+								<h4>上海直飞毛里求斯八天五晚自由行（赠接机）</h4><p class="text-right">6088<span>元</span></p>
+							</div></div></a></div>
+							<div class="col-md-4 two"><a href=""><div><img src="images/icon/7.jpg" alt="images"><div class="mysDiv"><h4>上海直飞毛里求斯八天五晚自由行（赠接机）</h4><p class="text-right">6088<span>元</span></p></div></div></a></div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 two"><a href=""><div><img src="images/icon/9.jpg" alt="images"><div class="mysDiv"><h4>上海直飞毛里求斯八天五晚自由行（赠接机）</h4><p class="text-right">6088<span>元</span></p></div></div></a></div>
+							<div class="col-md-4 two"><a href=""><div><img src="images/icon/10.jpg" alt="images"><div class="mysDiv"><h4>上海直飞毛里求斯八天五晚自由行（赠接机）</h4><p class="text-right">6088<span>元</span></p></div></div></a></div>
+							<div class="col-md-4 two"><a href=""><div><img src="images/icon/11.jpg" alt="images"><div class="mysDiv"><h4>上海直飞毛里求斯八天五晚自由行（赠接机）</h4><p class="text-right">6088<span>元</span></p></div></div></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="row mytitle text-center">
+					<span class="mytextfirst">最</span>•<span class="mytextlast">攻略</span>
+				</div>
+				<div class="row mystrategy">
+					<div class="row">
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/1.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/5.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/6.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/7.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/8.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/2.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/3.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+						<div class="col-md-3 three"><a href=""><div class="threes"><img src="images/icon/4.jpg" alt="images"></div><div class="_three"><div><img src="images/personIcon/4_2.jpg"></div><span>User</span><h4>#罗马游记攻略#Rome，By All Means，Rome</h4></div></a></div>
+					</div>
+				</div>
+				<div class="row mytitle text-center">
+					<span class="mytextfirst">最</span>•<span class="mytextlast">驴友</span>
+				</div>
+				<div class="row mytraveller">
+					<div class="row">
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_1.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_1.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_2.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_3.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_4.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_5.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_6.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+						<div class="col-md-3 four"><a href=""><div class="myFimg"><i><img src="images/personIcon/4_7.jpg"></i></div><div class="text-center myFriends"><h3>taylor</h3><h5>最喜欢的歌手没有之一，然后呢该说些什么？？？？？</h5></div></a></div>
+					</div>
+				</div>
+			<div class="row myfooter">
+				<div class="col-md-1 text-center">
+					<ul>
+						<li class="headerLi">关于我们</li>
+						<li><a href="">本站简介</a></li>
+						<li><a href="">联系我们</a></li>
+						<li><a href="">合作伙伴</a></li>
+						<li><a href="">进入后台</a></li>
+					</ul>
+				</div>
+				<div class="col-md-1 text-center">
+					<ul>
+						<li class="headerLi">加入我们</li>
+						<li><a href="">招聘职位</a></li>
+					</ul>
+				</div>
+				<div class="col-md-1 text-center">
+					<ul>
+						<li class="headerLi">网站条款</li>
+						<li><a href="">会员条款</a></li>
+						<li><a href="">社区指南</a></li>
+						<li><a href="">版权声明</a></li>
+						<li><a href="">免责声明</a></li>
+					</ul>
+				</div>
+				<div class="col-md-1 text-center">
+					<ul>
+						<li class="headerLi">帮助中心</li>
+						<li><a href="">新手帮助</a></li>
+						<li><a href="">使用帮助</a></li>
+						<li><a href="">网站地图</a></li>
+					</ul>
+				</div>
+				<div class="footerBottom text-center">
+					<p>版权所有&copy;Lynne Wei；本网站仅做学习交流之用，不做商业用途；</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
